@@ -15,4 +15,8 @@ struct CountModel {
         self.count += 1
     }
     
+    mutating func setCount(num: Int) {
+        self.count = num
+    }
+    
 }

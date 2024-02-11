@@ -29,4 +29,8 @@ class CountViewModel: ObservableObject {
         model.increment()
     }
     
+    public func setCount(num: Int) {
+        model.setCount(num: num)
+    }
+    
 }
