@@ -9,14 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @StateObject var viewModel: CountViewModel
+    @StateObject var model: CountModel
     
     var body: some View {
         VStack {
-            Text("\(viewModel.count)")
-            PreviewView(count: $viewModel.count)
-            ControllerView(count: $viewModel.count, incrementHandler: { viewModel.increment() }) { num in
-                viewModel.setCount(num:num)
+            Text("\(model.count)")
+            PreviewView(count: $model.count)
+            ControllerView(count: $model.count, incrementHandler: { model.increment() }) { num in
+                model.setCount(num:num)
             }
         }
         .padding()

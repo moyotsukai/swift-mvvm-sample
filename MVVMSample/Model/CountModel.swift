@@ -7,15 +7,16 @@
 
 import Foundation
 
-struct CountModel {
+@MainActor
+class CountModel: ObservableObject {
     
-    var count: Int = 0
+    @Published var count: Int = 0
     
-    mutating func increment() {
+    public func increment() {
         self.count += 1
     }
     
-    mutating func setCount(num: Int) {
+    public func setCount(num: Int) {
         self.count = num
     }
     
