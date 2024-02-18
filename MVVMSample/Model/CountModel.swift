@@ -10,13 +10,15 @@ import Foundation
 @MainActor
 class CountModel: ObservableObject {
     
+    static let shared = CountModel()
+    
     @Published var count: Int = 0
     
-    public func increment() {
+    func increment() {
         self.count += 1
     }
     
-    public func setCount(num: Int) {
+    func setCount(num: Int) {
         self.count = num
     }
     

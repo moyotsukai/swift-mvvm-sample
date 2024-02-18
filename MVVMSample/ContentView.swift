@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @StateObject var model: CountModel
+    @StateObject private var model = CountModel.shared
     
     var body: some View {
         VStack {
